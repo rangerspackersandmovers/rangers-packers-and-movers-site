@@ -31,7 +31,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
 </head>
 
 <body style="position:relative">
@@ -77,7 +77,7 @@
           <div class="offcanvas-body w-100">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
               <li class="nav-item dropdown">
-                <a class="nav-link" href="index.html">Home </a>
+                <a class="nav-link" href="#" onclick="scrollToTop(event)">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#about_us">About Us</a>
@@ -620,7 +620,7 @@
                   <a href="tel:+91-93113 65757"><i class="icofont-phone"></i> <span>+91-93113 65757</span></a>
                   <div class="text-nowrap">
                     <i class="icofont-email"></i>
-                    <a href="rangerspackersandmovers@gmail.com"><span
+                    <a href="mailto:rangerspackersandmovers@gmail.com"><span
                         class="__cf_email__">rangerspackersandmovers@gmail.com</span></a>
                   </div>
                 </div>
@@ -774,10 +774,10 @@
   <script src="assets/twitter/jquery.tweet.js"></script>
   <script src="assets/js/site-custom.js"></script>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
-      emailjs.init("9guh-gSEX1K-nucEA"); 
+      emailjs.init("9guh-gSEX1K-nucEA");
     })();
   </script>
   <script type="text/javascript">
@@ -891,7 +891,7 @@
       });
       // $('.fade').addClass('active')
     });
-  
+
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('form').addEventListener('submit', function (event) {
         event.preventDefault();
@@ -917,7 +917,10 @@
       });
     });
 
-
+    function scrollToTop(event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
     integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
