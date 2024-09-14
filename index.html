@@ -31,7 +31,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
 </head>
 
 <body style="position:relative">
@@ -77,7 +77,7 @@
           <div class="offcanvas-body w-100">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
               <li class="nav-item dropdown">
-                <a class="nav-link" href="index.html">Home </a>
+                <a class="nav-link"  onclick="scrollToTop(event)">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#about_us">About Us</a>
@@ -199,65 +199,70 @@
                 animation-delay: 0.2s;
                 animation-name: fadeInRight;
               ">
-            <form action="#" method="post" novalidate="novalidate" class="rounded-field gray-field">
-              <div class="row g-4 mb-4">
-                <div class="col">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" />
-                </div>
-                <div class="col">
-                  <input type="text" name="email" class="form-control" placeholder="Email" />
-                </div>
+           <form action="#" method="post" novalidate="novalidate" class="rounded-field gray-field">
+            <div class="row g-4 mb-4">
+              <div class="col">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+                <div class="invalid-feedback">Please enter your name.</div>
               </div>
-
-              <div class="row g-4 mb-4">
-                <div class="col">
-                  <input type="text" name="number" class="form-control" placeholder="Contact Number" />
-                </div>
-                <div class="col">
-                  <input type="text" name="dateMoving" class="form-control" placeholder="Date Of Moving" />
-                </div>
+              <div class="col">
+                <input type="email" name="email" class="form-control" placeholder="Email" required />
+                <div class="invalid-feedback">Please enter a valid email address.</div>
               </div>
-
-              <div class="row g-4 mb-4">
-                <div class="col">
-                  <input type="text" name="movingFrom" class="form-control" placeholder="Moving From" />
-                </div>
-                <div class="col">
-                  <input type="text" name="movingTo" class="form-control" placeholder="Moving To" />
-                </div>
+            </div>
+          
+            <div class="row g-4 mb-4">
+              <div class="col">
+                <input type="tel" name="number" class="form-control" placeholder="Contact Number" pattern="\d{10}" required />
+                <div class="invalid-feedback">Please enter a valid 10-digit contact number.</div>
               </div>
-
-              <div class="row g-4 mb-4">
-                <div class="col">
-                  <textarea rows="7" placeholder="Message " class="form-control" data-gramm="false"
-                    wt-ignore-input="true"></textarea>
-                </div>
+              <div class="col">
+                <input type="date" name="dateMoving" class="form-control" placeholder="Date Of Moving" required />
+                <div class="invalid-feedback">Please select a moving date.</div>
               </div>
-
-              <div class="row g-4 mb-4">
-                <div class="col">
-                  <select name="swiftingType" class="row mx-0" id="cars">
-                    <option value="homeShifting">Home Shifting</option>
-                    <option value="homeVehicle">Home+Vehicle</option>
-                    <option value="officeShifting">Office Shifting</option>
-                    <option value="carTransportation">
-                      Car Transportation
-                    </option>
-                    <option value="bikeTransportation">
-                      Bike Transportation
-                    </option>
-                    <option value="warehousing">Warehousing Services</option>
-                    <option value="petTransport">Pet Transport</option>
-                  </select>
-                </div>
+            </div>
+          
+            <div class="row g-4 mb-4">
+              <div class="col">
+                <input type="text" name="movingFrom" class="form-control" placeholder="Moving From" required />
+                <div class="invalid-feedback">Please enter the location you're moving from.</div>
               </div>
-
-              <div class="form-row text-center">
-                <button type="submit" class="form-btn mx-auto btn-theme bg-orange">
-                  Submit <i class="icofont-rounded-right"></i>
-                </button>
+              <div class="col">
+                <input type="text" name="movingTo" class="form-control" placeholder="Moving To" required />
+                <div class="invalid-feedback">Please enter the location you're moving to.</div>
               </div>
-            </form>
+            </div>
+          
+            <div class="row g-4 mb-4">
+              <div class="col">
+                <textarea rows="7" name="message" placeholder="Message" class="form-control" data-gramm="false" wt-ignore-input="true" required></textarea>
+                <div class="invalid-feedback">Please enter a message.</div>
+              </div>
+            </div>
+          
+            <div class="row g-4 mb-4">
+              <div class="col">
+                <select name="swiftingType" class="form-select" id="cars" required>
+                  <option value="">Select Service Type</option>
+                  <option value="homeShifting">Home Shifting</option>
+                  <option value="homeVehicle">Home+Vehicle</option>
+                  <option value="officeShifting">Office Shifting</option>
+                  <option value="carTransportation">Car Transportation</option>
+                  <option value="bikeTransportation">Bike Transportation</option>
+                  <option value="warehousing">Warehousing Services</option>
+                  <option value="petTransport">Pet Transport</option>
+                </select>
+                <div class="invalid-feedback">Please select a service type.</div>
+              </div>
+            </div>
+          
+            <div class="form-row text-center">
+              <button type="submit" class="form-btn mx-auto btn-theme bg-orange">
+                Submit <i class="icofont-rounded-right"></i>
+              </button>
+            </div>
+          </form>
+          
           </div>
         </div>
       </div>
@@ -620,7 +625,7 @@
                   <a href="tel:+91-93113 65757"><i class="icofont-phone"></i> <span>+91-93113 65757</span></a>
                   <div class="text-nowrap">
                     <i class="icofont-email"></i>
-                    <a href="rangerspackersandmovers@gmail.com"><span
+                    <a href="mailto:rangerspackersandmovers@gmail.com"><span
                         class="__cf_email__">rangerspackersandmovers@gmail.com</span></a>
                   </div>
                 </div>
@@ -774,10 +779,10 @@
   <script src="assets/twitter/jquery.tweet.js"></script>
   <script src="assets/js/site-custom.js"></script>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
-      emailjs.init("9guh-gSEX1K-nucEA"); 
+      emailjs.init("9guh-gSEX1K-nucEA");
     })();
   </script>
   <script type="text/javascript">
@@ -891,10 +896,17 @@
       });
       // $('.fade').addClass('active')
     });
-  
+
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('form').addEventListener('submit', function (event) {
         event.preventDefault();
+        if (!this.checkValidity()) {
+          this.classList.add('was-validated');
+       event.preventDefault();
+       event.stopPropagation();
+       return;
+       }
+ 
 
         // Prepare the form data
         const formData = {
@@ -917,7 +929,10 @@
       });
     });
 
-
+    function scrollToTop(event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   </script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
     integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
