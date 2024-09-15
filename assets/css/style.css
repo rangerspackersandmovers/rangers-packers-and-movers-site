@@ -462,7 +462,7 @@ h2.h2-xl {
 }
 .btn-theme.icon-left i,[class*=link-].icon-left i {
 	padding-right:9px;
-	padding-left:0
+	padding-left:0px;
 }
 .btn-theme.inverse-icon-org i {
 	color:var(--primary-color)
@@ -3802,3 +3802,26 @@ label.error {
 	font-size:13px
 }
 
+/* Call Icon Styling */
+.call-icon {
+    background-color: #FE8704; 
+    color: white;
+	padding-right: 6.5px !important;
+	padding-left: 2px !important;
+
+    font-size: 1.7rem;
+    text-decoration: none;
+    animation: bounce 2s infinite; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

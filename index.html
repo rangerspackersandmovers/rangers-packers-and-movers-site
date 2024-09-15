@@ -50,11 +50,11 @@
             <img src="assets/images/bg/logo.png" alt />
           </a>
         </div>
-
+<!-- 
         <div class="d-inline-flex request-btn order-lg-last">
           <a class="btn-theme icon-left bg-orange no-shadow align-self-center" style="text-decoration: none;"
             href="#quote"><i class="icofont-list"></i><span class="d-none d-sm-inline-block"> Get Estimate</span></a>
-
+          
           <button class="navbar-toggler x collapsed" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -62,7 +62,33 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        </div>
+        </div> -->
+
+        <div class="d-inline-flex request-btn order-lg-last">
+          <!-- Get Estimate Button -->
+          <a class="btn-theme icon-left bg-orange no-shadow align-self-center me-3" style="text-decoration: none;"
+              href="#quote">
+              <i class="icofont-list"></i>
+              <span class="d-none d-sm-inline-block"> Get Estimate</span>
+          </a>
+          
+          <!-- Call Icon -->
+          <a class="btn-theme call-icon   bg-orange no-shadow align-self-center me-3" style="text-decoration: none; padding:0px; "
+             href="tel:+91-93113 65757">
+              <i class="icofont-phone"></i>
+             
+          </a>
+    
+          <!-- Navbar Toggler Button -->
+          <button class="navbar-toggler x collapsed" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+      
 
         <div class="navbar-collapse offcanvas offcanvas-start offcanvas-collapse nav-light" id="navbarCollapse">
           <div class="offcanvas-header">
@@ -177,7 +203,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 wow fadeInRight" data-wow-duration="0" data-wow-delay="0.2s" style="
+          <div class="col-lg-4 d-none d-lg-block wow fadeInRight" data-wow-duration="0" data-wow-delay="0.2s" style="
                 visibility: visible;
                 animation-delay: 0.2s;
                 animation-name: fadeInRight;
@@ -207,7 +233,7 @@
               </div>
               <div class="col">
                 <input type="email" name="email" class="form-control" placeholder="Email" required />
-                <div class="invalid-feedback">Please enter a valid email address.</div>
+                <div class="invalid-feedback">Please enter a valid email.</div>
               </div>
             </div>
           
@@ -217,7 +243,8 @@
                 <div class="invalid-feedback">Please enter a valid 10-digit contact number.</div>
               </div>
               <div class="col">
-                <input type="date" name="dateMoving" class="form-control" placeholder="Date Of Moving" required />
+                <!-- <input type="text" name="dateMoving" class="form-control" id="dateMoving" placeholder="Date of Moving (YYYY-MM-DD)" required /> -->
+                <input type="text"placeholder="Date of Moving (YYYY-MM-DD)"  class="form-control" id="dateMoving" onfocus="(this.type='date')">
                 <div class="invalid-feedback">Please select a moving date.</div>
               </div>
             </div>
